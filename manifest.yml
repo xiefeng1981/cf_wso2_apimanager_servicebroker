@@ -1,0 +1,8 @@
+---
+applications:
+- name: apimanager-servicebroker
+  memory: 128M
+  instances: 1
+#  host: apimanager-servicebroker
+#  domain: cfapps.io
+  path: target/SampleAPIManagerServiceBroker-1.0.0.jar

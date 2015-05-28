@@ -7,6 +7,7 @@ import java.util.List;
 import kr.or.nia.openpaas.commonComponent.serviceBroker.common.ServiceBrokerException;
 import kr.or.nia.openpaas.commonComponent.serviceBroker.common.StringUtils;
 import kr.or.nia.openpaas.commonComponent.serviceBroker.vo.CatalogVO;
+import kr.or.nia.openpaas.commonComponent.serviceBroker.vo.DashboardClientVO;
 import kr.or.nia.openpaas.commonComponent.serviceBroker.vo.PlanVO;
 import kr.or.nia.openpaas.commonComponent.serviceBroker.vo.ServiceMetadataInMetadataVO;
 import kr.or.nia.openpaas.commonComponent.serviceBroker.vo.ServiceMetadataVO;
@@ -127,7 +128,7 @@ public class CatalogService {
 			List<PlanVO> plans = new ArrayList<PlanVO>();
 			
 			PlanVO plan = new PlanVO();
-			plan.setId("Unlimited");
+			plan.setId("PLAN_"+api.get("name").asText() + " " + api.get("version").asText() + " Unlimited");
 			plan.setDescription("Unlimited plan");
 			plan.setFree(true);
 			plan.setName("Unlimited");
@@ -135,6 +136,13 @@ public class CatalogService {
 			plans.add(plan);
 			service.setPlans(plans);
 
+//			DashboardClientVO dashboard = new DashboardClientVO();
+//			dashboard.setId("A");
+//			dashboard.setSecret("B");
+//			dashboard.setRedirect_uri("http://localhost");
+//			
+//			service.setDashboard_client(dashboard);
+			
 			// Add service vo
 			services.add(service);
 		}

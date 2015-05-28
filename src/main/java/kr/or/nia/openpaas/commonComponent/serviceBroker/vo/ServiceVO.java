@@ -13,12 +13,11 @@ public class ServiceVO {
 	private ServiceMetadataVO metadata;
 	private boolean plan_updateable;
 	private List<PlanVO> plans;
-	private List<DashboardClientVO> dashboard_client;
+	private DashboardClientVO dashboard_client;
 	
 	public ServiceVO() {
 		tags = new ArrayList<String>();
 		plans = new ArrayList<PlanVO>();
-		dashboard_client = new ArrayList<DashboardClientVO>();
 	}
 	
 	public String getId() {
@@ -69,10 +68,13 @@ public class ServiceVO {
 	public void setPlans(List<PlanVO> plans) {
 		this.plans = plans;
 	}
-	public List<DashboardClientVO> getDashboard_client() {
+
+	public DashboardClientVO getDashboard_client() {
 		return dashboard_client;
 	}
-	public void setDashboard_client(List<DashboardClientVO> dashboard_client) {
+
+	public void setDashboard_client(DashboardClientVO dashboard_client) {
 		this.dashboard_client = dashboard_client;
 	}
+	
 }

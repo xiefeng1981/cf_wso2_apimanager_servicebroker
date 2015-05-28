@@ -1,7 +1,7 @@
 ---
 applications:
-- name: apimanager-servicebroker
-  memory: 128M
+- name: wso2-apimanager-servicebroker
+  memory: 1024M
   instances: 1
 #  host: apimanager-servicebroker
 #  domain: cfapps.io

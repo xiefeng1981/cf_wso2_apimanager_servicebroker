@@ -55,6 +55,10 @@ public class DemoServiceBrokerController extends CommonController {
 		
 		System.out.println("instance_id:" + instance_id + "body:" + requestVO.toString());
 		
+		// TODO
+		// Username is limited 30 characters.
+		instance_id = instance_id.substring(30);
+		
 		ProvisionVO provision = provisionService.setProvision(instance_id, requestVO);
 		
 		return provision;
@@ -69,6 +73,10 @@ public class DemoServiceBrokerController extends CommonController {
 		
 		System.out.println("instance_id:" + instance_id + ", binding_id:" + binding_id + ", body:" + requestVO.toString());
 		
+		// TODO
+		// Username is limited 30 characters.
+		instance_id = instance_id.substring(30);
+
 		BindVO bind = bindService.setBind(instance_id, binding_id, requestVO);
 		
 		return bind;

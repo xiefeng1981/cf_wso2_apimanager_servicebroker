@@ -105,7 +105,10 @@ public class ProvisionService {
 				version = requestVO.getService_id().split(" ")[1];
 				
 				provider = service.getMetadata().getProvider();
-				plan_id = requestVO.getPlan_id();
+				
+				System.out.println("Plan_id:" + requestVO.getPlan_id());
+				
+				plan_id = requestVO.getPlan_id().split(" ")[2];
 				
 				System.out.println("apiname:"+apiname+", version:"+version +", provider:"+provider+", plan_id:"+plan_id);
 				
